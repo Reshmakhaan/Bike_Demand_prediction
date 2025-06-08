@@ -142,9 +142,8 @@ Thanks to:
 ## 👩‍💻 Author
 
 **Reshma Patan**
-📧 Email: [reshmapatan@example.com](mailto:reshmapatan@example.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
-📁 [Portfolio](https://yourportfolio.com)
+📧 Email: [reshmapatan@gmail.com](mailto:reshmapatan@example.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/reshmapatan/)
 
 ---
 
@@ -154,12 +153,6 @@ Thanks to:
 ```
 
 ---
-
-Let me know if you'd like the **screenshot to be created or added**, and I can generate a sample output image or guide you to do so.
-
-Would you like me to paste this directly into your `README.md` file, or prepare a `.md` file download for you?
-```
-
 
 
 
