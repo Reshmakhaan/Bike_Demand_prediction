@@ -16,11 +16,6 @@
 🚲 This project predicts the **number of bike rentals per day** using historical data including temperature, weather, season, holidays, and more.  
 Built as part of a Data Science internship training to apply real-world ML practices — from preprocessing to model tuning & evaluation.
 
-### 📄 Screenshot PDF
-
-[View the output plot (PDF)](screenshots/%22screenshot%20-%20Copy.pdf%22)
-
----
 
 ## 📸 Screenshot – Output Example
 
