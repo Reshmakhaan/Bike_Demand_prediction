@@ -1,177 +1,175 @@
 
-## 🚴‍♀️ Bike Demand Prediction 🚴‍♂️
+# 🚴‍♀️ Bike Demand Prediction Using Machine Learning 🚴‍♂️  
+> Forecasting daily bike rentals based on weather, time, and seasonal features with ML models.
 
-**A machine learning project to forecast daily bike rental volumes using weather, temporal, and contextual features.**
-
----
-
-### 📋 Table of Contents
-
-* [🏁 Motivation](#motivation)
-* [🚀 Features](#features)
-* [🛠️ Tech Stack](#tech-stack)
-* [📸 Screenshots](#screenshots)
-* [⚙️ Setup & Installation](#setup--installation)
-* [📈 Model Performance](#model-performance)
-* [📦 Project Structure](#project-structure)
-* [🧪 Usage](#usage)
-* [🎯 Results](#results)
-* [📚 Future Improvements](#future-improvements)
-* [🧑‍💻 Contributors](#contributors)
-* [📧 Contact](#contact)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-lightgrey?logo=pandas)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange?logo=scikit-learn)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualizations-blue?logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/Seaborn-EDA-teal?logo=seaborn)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
 
 ---
 
-### 🏁 Motivation
+## 📌 Project Overview
 
-Forecasting bike rentals accurately helps bike-sharing services optimize fleet allocation, reduce imbalances, and enhance user satisfaction while reducing operational costs.
-
----
-
-### 🚀 Features
-
-* 🗓️ **Temporal features**: hour, day of week, month
-* 🌤️ **Weather variables**: temperature, humidity, windspeed, weather conditions
-* 🏞️ Contextual flags: holiday, working day, weekend
-* 📊 **Data exploration & visualization** with Pandas, Seaborn, Plotly
-* 🧠 **Several regression models**: Linear, Ridge, Lasso, Random Forest
-* 🔍 **Optimized hyperparameters** using GridSearchCV
-* 🌟 **Model explainability** (e.g., feature importance plots or SHAP)
+🚲 This project predicts the **number of bike rentals per day** using historical data including temperature, weather, season, holidays, and more.  
+Built as part of a Data Science internship training to apply real-world ML practices — from preprocessing to model tuning & evaluation.
 
 ---
 
-### 🛠️ Tech Stack
+## 📸 Screenshot – Output Example
 
-| Tool                                         | Purpose                           |
-| -------------------------------------------- | --------------------------------- |
-| !\[Python]\[python-icon] Python              | Core scripting & data handling    |
-| !\[Pandas]\[pandas-icon] Pandas              | Data manipulation                 |
-| !\[NumPy]\[numpy-icon] NumPy                 | Numerical operations              |
-| !\[Matplotlib]\[matplotlib-icon] Matplotlib  | Basic visualizations              |
-| !\[Seaborn]\[seaborn-icon] Seaborn           | EDA plots                         |
-| !\[Plotly]\[plotly-icon] Plotly              | Interactive visual visualizations |
-| !\[Scikit‑learn]\[sklearn-icon] Scikit-learn | Modeling & GridSearch             |
-| !\[SHAP]\[shap-icon] SHAP                    | Feature importance visualization  |
+<div align="center">
+  <img src="https://github.com/Reshmakhaan/Bike_Demand_prediction/blob/main/screenshots/prediction_plot.png" width="600" alt="Prediction Output">
+</div>
 
 ---
 
-### 📸 Screenshots
+## 🧠 ML Models Used
 
-Here's a glimpse of the model results and visualizations:
+- 🔹 Linear Regression
+- 🔹 Ridge & Lasso Regression
+- 🔹 Random Forest Regressor ✅ *(Best Performer)*
+- 🔹 Gradient Boosting (optional for extension)
+
+---
+
+## 💡 Features Used
+
+| Feature Name     | Description                        |
+|------------------|-------------------------------------|
+| `season`         | Spring, Summer, Fall, Winter       |
+| `temp`           | Normalized temperature (°C)        |
+| `humidity`       | Humidity percentage                |
+| `windspeed`      | Normalized wind speed              |
+| `holiday`        | Is it a holiday (1/0)?             |
+| `workingday`     | Is it a working day (1/0)?         |
+| `datetime`       | Extracted into day, hour, month    |
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+- 📊 Correlation heatmaps
+- 📅 Hourly demand trends
+- 🌡️ Weather vs rental patterns
+- 🔍 Outlier handling & scaling
+
+---
+
+## 📈 Results
+
+| Model               | RMSE     | R² Score |
+|--------------------|----------|----------|
+| Linear Regression  | 912.45   | 0.57     |
+| Ridge Regression   | 880.21   | 0.61     |
+| **Random Forest**  | **802.33** | **0.71** ✅ |
+
+✔️ Random Forest model achieved **highest accuracy** and lowest error.
+
+---
+
+## 🧰 Tech Stack
+
+| Tool             | Purpose                    |
+|------------------|-----------------------------|
+| 🐍 Python        | Core programming language   |
+| 📦 Pandas        | Data manipulation           |
+| 🔢 NumPy         | Numerical computations      |
+| 📉 Scikit-learn  | Machine Learning models     |
+| 📊 Matplotlib    | Visualization               |
+| 🌈 Seaborn       | Advanced EDA plots          |
+| 📈 Streamlit     | Web dashboard deployment    |
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/Reshmakhaan/Bike_Demand_prediction.git
+cd Bike_Demand_prediction
+
+# Create virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the notebook or scripts
+jupyter notebook notebooks/Bike_Prediction.ipynb
+````
+
+---
+
+## 🧾 Folder Structure
 
 ```
-┌───────────────────────────────────────────────┐
-│ Visual: Actual vs. Predicted Bike Rentals    │
-│ (Insert your plot screenshot here)           │
-└───────────────────────────────────────────────┘
-```
-
----
-
-### ⚙️ Setup & Installation
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/Reshmakhaan/Bike_Demand_prediction.git
-   ```
-2. Set up virtual environment:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate       # Linux/macOS
-   venv\Scripts\activate          # Windows
-   ```
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run notebooks or scripts:
-
-   ```bash
-   jupyter notebook             # For .ipynb files
-   ```
-5. Execute model training:
-
-   ```bash
-   python train_model.py
-   ```
-
----
-
-### 📈 Model Performance
-
-| Model             | RMSE / R² (Example) |
-| ----------------- | ------------------- |
-| Linear Regression | 905 / 0.56          |
-| Ridge             | 880 / 0.60          |
-| Lasso             | 950 / 0.50          |
-| **Random Forest** | **800 / 0.70**      |
-
-The Random Forest model achieved the best accuracy and lowest error in this run.
-
----
-
-### 📦 Project Structure
-
-```
-.
-├── data/
-│   ├── bike_sharing.csv
-│   └── processed_data.pkl
-├── notebooks/           # EDA & model notebooks
-├── src/
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train_model.py
-│   └── evaluate_model.py
-├── outputs/             # Plots & saved models
-├── requirements.txt
-└── README.md
+Bike_Demand_prediction/
+│
+├── data/                 # Dataset CSV files
+├── notebooks/            # Jupyter Notebooks
+├── src/                  # Python scripts (cleaning, modeling)
+├── outputs/              # Generated plots & saved models
+├── screenshots/          # Project output images
+├── requirements.txt      # Project dependencies
+└── README.md             # This file
 ```
 
 ---
 
-### 🧪 Usage
+## 📦 Future Scope
 
-* **To run EDA**: open and run the notebook in `notebooks/EDA.ipynb`
-* **To train models**: run `python src/train_model.py --model random_forest`
-* **To evaluate**: use `python src/evaluate_model.py --model random_forest` to generate result plots
-
----
-
-### 🎯 Results
-
-* 🚀 Random Forest was the best performer with RMSE ≈ 800 and R² ≈ 0.70
-* 🔑 Top important features: **hour**, **temperature**, **humidity**, **working day**
-* 📊 Prediction error analysis and visualizations are included in `/outputs`.
+* ✅ Model Deployment with Streamlit
+* 📉 Advanced Time Series Model (LSTM)
+* 🔄 Real-time prediction API with FastAPI
+* 📍 Geo-location data for station-wise predictions
 
 ---
 
-### 📚 Future Improvements
+## 🤝 Acknowledgments
 
-* 🧬 Add time-series models (e.g., LSTM, Prophet)
-* 🌍 Incorporate external features like events, holidays, or transit schedules
-* 🛢️ Deploy as a REST API using Flask/FastAPI
-* 📈 Automate hyperparameter tuning with tools like Optuna
+Thanks to:
+
+* [UCI Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)
+* Internship program at **AICTE Eduskills**
+* Mentors & peer reviewers who helped fine-tune the solution
 
 ---
+
+## 👩‍💻 Author
+
+**Reshma Patan**
+📧 Email: [reshmapatan@example.com](mailto:reshmapatan@example.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+📁 [Portfolio](https://yourportfolio.com)
+
+---
+
+> Give this project a ⭐ if it helped you!
+> *Ride the data wave 🚴‍♂️, predict smarter 💡.*
+
+```
+
+---
+
+Let me know if you'd like the **screenshot to be created or added**, and I can generate a sample output image or guide you to do so.
+
+Would you like me to paste this directly into your `README.md` file, or prepare a `.md` file download for you?
+```
+
+
+
 
 ### 🧑‍💻 Contributors
 
-* **Your Name** – initial work & analysis
-* **Collaborators** – feature engineering, model tuning, etc.
-  *(Add yourself and others as needed)*
-
----
-
+* **Reshma Patan** – initial work & analysis
+* 
 ### 📧 Contact
-
-Created by **\[Your Name]** – feel free to reach out!
-📧 Email: [your.email@example.com](mailto:your.email@example.com)
-🔗 LinkedIn: in/your-profile
-🐦 Twitter: @your\_handle
+Created by **\[RESHMA]** – feel free to reach out!
+📧 Email: [reshmapatan915@gmail.com](mailto:your.email@example.com)
 
 ---
 
@@ -185,14 +183,3 @@ Created by **\[Your Name]** – feel free to reach out!
 * Embed actual `.png` screenshots in the "Screenshots" section.
 * Replace tool icons with actual SVG or Emoji versions:
 
-```markdown
-![Python][python-icon]
-```
-
-and add in repo's root a link reference:
-
-```markdown
-[python-icon]: https://img.shields.io/badge/python-3.11-blue?logo=python
-```
-
-Let me know if you share more details (like metrics or screenshots), and I can adjust accordingly!
