@@ -21,7 +21,7 @@ Built as part of a Data Science internship training to apply real-world ML pract
 ## 📸 Screenshot – Output Example
 
 <div align="center">
-  <img src="https://github.com/Reshmakhaan/Bike_Demand_prediction/blob/main/screenshots/prediction_plot.png" width="600" alt="Prediction Output">
+  <img src="https://github.com/Reshmakhaan/Bike_Demand_prediction/screenshot - Copy.pdf" width="600" alt="Prediction Output">
 </div>
 
 ---
